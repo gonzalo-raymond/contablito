@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contablito</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="webfontkit-20220829-024316/stylesheet.css">
+</head>
+<body>
+    <div class="container">
+        <div class="contablito__container">
+            <h1 class="titulo">Contablito</h1>
+            <div class="descripcion">
+                <p>Descripción</p>
+                <input type="text" id="desc-input"><br>
+            </div>
+            <div class="transaccion">
+                <p>Tipo de Transacción</p>
+                <input type="radio" value="" class="radio" name="tt" id="compra">
+                <label for="tt">Compra</label>
+                <input type="radio" value="" class="radio" name="tt" id="venta">
+                <label for="tt">Venta</label>
+            </div>
+            <div class="iva">
+                <p>Tipo IVA</p>
+                <input type="radio" value="" class="radio" name="iva" id="ivaB">
+                <label for="iva">Básico</label>
+                <input type="radio" value="" class="radio" name="iva" id="ivaM">
+                <label for="iva">Mínimo</label>
+                <input type="radio" value="" class="radio" name="iva" id="ivaE">
+                <label for="iva">Exento</label>
+            </div>
+
+            <div class="subtotal">
+                <p>Subtotal ($)</p>
+                <input type="number" name="subt" id="subt">
+                <button type="button" class="btn" id="btn-in">Ingresar</button>
+            </div>
+
+            <div class="row">
+              
+                <table border="1" class="table" id="tabla">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Descripción</th>
+                            <th>Tipo</th>
+                            <th>Subtotal ($)</th>
+                            <th>IVA ($)</th>
+                            <th>Total (IVA inc)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="data-container"></tbody>
+                </table>
+            </div>
+            <div class="total-container">
+                <p>Total Ventas: <span id="total-ventas">$0</span></p>
+                <p>Total Compras: <span id="total-compras">$0</span></p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/app.js" defer></script>
+</html>
